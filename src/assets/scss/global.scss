@@ -1,0 +1,41 @@
+// Externals
+
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/modals";
+@import "basics/animations";
+
+// Pages
+@import "pages/home-page";
+@import "pages/contact-details";
+@import "pages/contact-edit";
+@import "pages/statistic-page";
+
+
+// Components
+@import "components/nav-bar";
+@import "components/contact-filter";
+@import "components/contact-preview";
+@import "components/delete-modal";
+
+
+
+
+.app-header {
+    background: #03A9F4;
+    .logo {
+        @include quotes
+    }
+    
+}
+a{
+    text-decoration: none;
+}

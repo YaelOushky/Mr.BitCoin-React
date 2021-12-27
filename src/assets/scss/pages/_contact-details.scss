@@ -1,0 +1,35 @@
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    img{
+        border-radius: 100px;
+        width: 150px;
+        height: 150px;
+        margin: 20px;
+        object-fit: cover;
+    }
+    .button-icon{
+            background-color: #040622;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+        button{
+            font-size: 20px;
+            background: none;
+            color: whitesmoke;
+            cursor: pointer;
+            border-radius: 6px;
+            padding:8px 12px;
+            // background:none;
+            border: none;
+            &:hover{
+                color: rgb(37, 37, 37);
+            }
+        }
+
+    }
+}

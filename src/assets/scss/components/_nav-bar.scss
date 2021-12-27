@@ -1,0 +1,33 @@
+.navbar-container {
+    background-color: rgba(8, 47, 98, 0.986);
+    box-shadow: -1px 2px 12px 1px  rgb(187, 187, 187);
+    .navbar {
+        margin-inline-start: 15px;
+        margin-inline-end: 15px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        a.navbar-brand {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 25px;
+        }
+        .link-list ul {
+            display: flex;
+            text-align: center;
+            flex-direction: inherit;
+            gap: 30px;
+            li {
+                list-style: none;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

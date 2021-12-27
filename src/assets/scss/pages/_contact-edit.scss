@@ -1,0 +1,37 @@
+.contact-edit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    img {
+        margin: 40px;
+        border-radius: 100px;
+        width: 150px;
+    }
+    .form-group {
+        input {
+            color: whitesmoke;
+            background-color: rgba(10, 10, 32, 0.62);
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            width: 400px;
+            min-height: 45px;
+            margin-top: 3px;
+        }
+        .alert-danger{
+            padding: 11px;
+            border-radius: 5px ;
+            background-color: rgba(10, 10, 32, 0.383);
+        }
+    }
+    button{
+        float: right;
+        margin-top: 4px;
+      border: none;
+      color: whitesmoke;
+      padding: 15px 30px;
+      background-color: #d93a77;
+      border-radius: 5px;
+    }
+}

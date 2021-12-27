@@ -1,0 +1,73 @@
+.modal {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .modal-header {
+    padding: 2px 16px;
+    color: rgb(39, 39, 39);
+    border-bottom: 1px solid #E6E9EF;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 16px;
+    }
+    .btn-close {
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .fas.fa-times {
+      color: #888;
+    }
+  }
+  .modal-body {
+    padding: 2px 16px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .modal-content {
+    background-color: #FEFEFE;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    .btn-delete {
+      background-color: lightgray;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-delete:hover {
+      background-color: rgb(131, 131, 131);
+    }
+    .btn-cancel {
+      padding: 10px 20px;
+      cursor: pointer;
+      color: #323338;
+      font-size: 14px;
+    }
+    .btn-cancel:hover {
+      background-color: #F5F6F8;
+    }
+  }
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
