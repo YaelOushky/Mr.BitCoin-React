@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import { getUser } from '../Services/UserService';
+import { loadUser } from '../Services/UserService';
 import { getBitcoin } from '../Services/BitcoinService';
 
 export class HomePage extends Component {
     state={
         user :null,
         coin:0,
-        filterBy: null
     }
      componentDidMount() {
         this.loadUser()
@@ -17,8 +16,8 @@ export class HomePage extends Component {
         this.setState({coin})
     }
      loadUser() {
-        const { filterBy } = this.state
-        const user = getUser(filterBy)
+        const user = loadUser()
+        console.log(user);
         this.setState({ user })
     }
     render() {

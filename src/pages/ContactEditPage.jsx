@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Joi from 'joi-browser';
 import Form from '../components/Form';
-import { getContactById, saveContact } from '../Services/ContactService';
+import {  saveContact, getContactByIdServe } from '../Services/ContactService';
 export class ContactEditPage extends Form {
     state = {
-        contact: {
+        data: {
             name: '',
             email: '',
             phone: '',
@@ -19,13 +19,12 @@ export class ContactEditPage extends Form {
     };
     async componentDidMount() {
         const contactId = this.props.match.params.id;
-        if (!contactId ) return this.setState({ contact: this.mapToViewModal(this.state.contact) })
+        if (!contactId ) return this.setState({ data: this.mapToViewModal(this.state.data) })
 
-        const contact = await getContactById(contactId)
+        const contact = await getContactByIdServe(contactId)
         console.log(contact);
-        // if (!contact) return this.props.history.replace('/not-found');
 
-        this.setState({ contact: this.mapToViewModal(contact) });
+        this.setState({ data: this.mapToViewModal(contact) });
     }
     mapToViewModal(contact) {
         return {
@@ -38,15 +37,15 @@ export class ContactEditPage extends Form {
 
     doSubmit = () => {
         //Call the server
-        console.log(this.state.contact);
-        saveContact(this.state.contact);
+        console.log(this.state.data);
+        saveContact(this.state.data);
         this.props.history.push('/contact');
     };
 
     render() {
         return (
             <div className='contact-edit'>
-                <img src={`./../../imgs/user.jpg`}  alt="" />
+                <img src={`../../public/imgs/user.jpg`}  alt="" />
                 <form onSubmit={this.handleSubmit}>
                     {this.renderInput('name', 'Name')}
                     {this.renderInput(

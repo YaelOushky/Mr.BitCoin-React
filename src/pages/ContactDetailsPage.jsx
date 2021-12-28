@@ -1,5 +1,5 @@
 import React from 'react';
-import { getContactById } from '../Services/ContactService';
+import {  getContactByIdServe } from '../Services/ContactService';
 import { Link } from 'react-router-dom';
 
 export class ContactDetailsPage extends React.Component {
@@ -7,8 +7,7 @@ export class ContactDetailsPage extends React.Component {
         contact: null,
     };
     async componentDidMount() {
-        const contact = await getContactById(this.props.match.params.id);
-        console.log(contact);
+        const contact = await getContactByIdServe(this.props.match.params.id);
         this.setState({ contact });
     }
 

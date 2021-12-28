@@ -18,17 +18,14 @@ export class StatisticPage extends Component {
     }
     async loadConfirmed() {
         const newData = await getConfirmedTransactions();
-        console.log(newData);
         const dataConfirmed = newData.values.map((d) => {
             return d.y;
         });
-        console.log(newData.description);
         const descriptionConfirmed = newData.description;
         this.setState({ dataConfirmed, descriptionConfirmed });
     }
     async loadMarket() {
         const newData = await getMarketPrice();
-        console.log(newData);
         const dataMarket = newData.values.map((d) => {
             return d.y;
         });

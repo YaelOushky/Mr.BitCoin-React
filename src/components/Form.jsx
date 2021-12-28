@@ -5,12 +5,12 @@ import { Select } from './Select';
 
 class Form extends React.Component {
     state = {
-        contact: {},
+        data: {},
         errors: {},
     };
     validate = () => {
         const options = { abortEarly: false };
-        const { error } = Joi.validate(this.state.contact, this.schema, options);
+        const { error } = Joi.validate(this.state.data, this.schema, options);
         if (!error) return null;
         const errors = {};
         for (let item of error.details) errors[item.path[0]] = item.message;
@@ -36,9 +36,9 @@ class Form extends React.Component {
         if (errorMessage) errors[input.name] = errorMessage;
         else delete errors[input.name];
 
-        const contact = { ...this.state.contact };
-        contact[input.name] = input.value;
-        this.setState({ contact, errors });
+        const data = { ...this.state.data };
+        data[input.name] = input.value;
+        this.setState({ data, errors });
     };
     renderButton(label) {
         return (
@@ -48,11 +48,11 @@ class Form extends React.Component {
         );
     }
 renderSelect(name,label,options){
-    const {contact, errors}= this.state
+    const {data, errors}= this.state
 
     return(<Select
     name={name}
-    value={contact[name]}
+    value={data[name]}
     label={label}
     options={options}
     onChange={this.handleChange}
@@ -63,13 +63,13 @@ renderSelect(name,label,options){
 }
 
     renderInput(name ,label ,type = "text") {
-        const { contact, errors } = this.state;
+        const { data, errors } = this.state;
 
         return (
             <Input
                 name={name}
                 label={label}
-                value={contact[name]}
+                value={data[name]}
                 onChange={this.handleChange}
                 type={type}
                 error={errors[name]}

@@ -4,14 +4,14 @@ const NavBar = () => {
     return (
         <section className='navbar-container'>
         <nav className="navbar container">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/home">
                 Mr.BitCoin
             </Link>
 
             <div className="link-list" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item ">
-                        <NavLink className="nav-link" to="/">
+                        <NavLink className="nav-link" to="/home">
                         <img src={`./../../imgs/home.png`}  /> 
                         </NavLink>
                     </li>
