@@ -45,7 +45,7 @@ export class ContactEditPage extends Form {
     render() {
         return (
             <div className='contact-edit'>
-                <img src={`../../public/imgs/user.jpg`}  alt="" />
+                <img src={`./imgs/user.jpg`}  alt="" />
                 <form onSubmit={this.handleSubmit}>
                     {this.renderInput('name', 'Name')}
                     {this.renderInput(
