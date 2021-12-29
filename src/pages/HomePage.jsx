@@ -25,7 +25,7 @@ export class HomePage extends Component {
         if (!user || !coin) return <div>Loading...</div>
         return (
             <div className='home-page'>
-                <img src={`../imgs/user.jpg`}  alt="" />
+                <img src={`./imgs/user.jpg`}  alt="" />
                 {/* <img src={require(`./../../imgs/user.jpg`).default}  alt="" /> */}
                 <div className='user-details'>
                 <h1> {user.name} </h1>
