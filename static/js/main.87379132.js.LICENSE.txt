@@ -18,6 +18,13 @@ object-assign
         * @license  MIT
         */
 
+/*!
+ * Chart.js v3.7.0
+ * https://www.chartjs.org
+ * (c) 2021 Chart.js Contributors
+ * Released under the MIT License
+ */
+
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 
 /** @license React v0.20.2
