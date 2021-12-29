@@ -2,11 +2,10 @@ import { getSuggestedQuery } from "@testing-library/react";
 import { storageService } from './storageService'
 
 const USER_KEY = 'user'
- let loggedInUser
 
 export function loadUser() {
     let user = storageService.load(USER_KEY)
-  user =  JSON.parse(user)
+    user =  JSON.parse(user)  
     return user
    
 }
@@ -26,15 +25,20 @@ export function getUser(user) {
     storageService.store(USER_KEY, newUser)
 }
 
-export function addMove(contact, amount) {
-    if (loggedInUser.coins - amount < 0) {
+export function addMoveUser(contact, amount, user) {
+  console.log('user',user);
+  console.log('amount', amount);
+  console.log('contact', contact);
+  // console.log(loggedInUser.coins);
+    if (user.coins - amount < 0) {
       alert('You cant do that')
       return
     }
-    loggedInUser.coins -= amount
+    user.coins -= amount
     let sentAt = new Date().toLocaleTimeString()
-    loggedInUser.moves.unshift({ to: contact, amount, sentAt })
-    storageService.store(USER_KEY, loggedInUser)
+    user.moves.unshift({ to : contact, amount, sentAt })
+    storageService.store(USER_KEY, user)
+    console.log(user);
   }
 
 function _makeId(length = 5) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Joi from 'joi-browser';
-import  {Input} from './Input';
+import  { Input } from './Input';
 import { Select } from './Select';
 
 class Form extends React.Component {
@@ -28,6 +28,7 @@ class Form extends React.Component {
         const errors = this.validate();
         this.setState({ errors: errors || {} });
         if (errors) return;
+        console.log(errors);
         this.doSubmit();
     };
     handleChange = ({ currentTarget: input }) => {

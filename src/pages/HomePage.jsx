@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { loadUser } from '../Services/UserService';
 import { getBitcoin } from '../Services/BitcoinService';
+import { MoveList } from '../components/MoveList';
 
 export class HomePage extends Component {
     state={
@@ -26,7 +27,6 @@ export class HomePage extends Component {
         return (
             <div className='home-page'>
                 <img src={`./imgs/user.jpg`}  alt="" />
-                {/* <img src={require(`./../../imgs/user.jpg`).default}  alt="" /> */}
                 <div className='user-details'>
                 <h1> {user.name} </h1>
                 <h3>{user.phone}</h3>
@@ -34,7 +34,7 @@ export class HomePage extends Component {
                 </div>
                 <h2><img src={`./imgs/coins.png`}  /> Coins: {user.coins}</h2>
                 <h2><img src={`./imgs/bitcoin.png`}  /> BTC: {coin}</h2>
-               {/* <input /> */}
+               {user.moves && <MoveList moves={user.moves}/>}
             </div>
         )
     }

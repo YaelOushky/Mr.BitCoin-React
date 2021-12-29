@@ -1,17 +1,21 @@
 .statistic-page{
     margin-inline-start: 15px;
     margin-inline-end: 15px;
-    margin-top: 50px;
+    margin-top: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 100px;
-    div{
+    .chart-box{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 50px;
+        canvas{
+            width: 600px;
+            height: 300px;
+        }
     }
 }

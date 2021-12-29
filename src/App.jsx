@@ -21,6 +21,7 @@ export function App() {
                     <Route path="/signup" component={SignupPage} />
                     <Route path="/contact/:id" component={ContactDetailsPage} />
                     <Route path="/contact" component={ContactPage} />
+                    {/* <Route path="/statistic" component={StatisticPage} /> */}
                     <Route path="/statistic" component={StatisticPage} />
                     <Redirect from="/" exact to="/signup" />
                 </Switch>
