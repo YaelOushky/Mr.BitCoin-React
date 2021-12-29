@@ -12,17 +12,17 @@ const NavBar = () => {
                 <ul className="navbar-nav">
                     <li className="nav-item ">
                         <NavLink className="nav-link" to="/home">
-                        <img src={`./../../imgs/home.png`}  /> 
+                        <img src={`./imgs/home.png`}  /> 
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/contact">
-                        <img src={`./../../imgs/team.png`}  />
+                        <img src={`./imgs/team.png`}  />
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/statistic">
-                            <img src={`./../../imgs/statistics.png`}  />
+                            <img src={`./imgs/statistics.png`}  />
                         </NavLink>
                     </li>
                 </ul>

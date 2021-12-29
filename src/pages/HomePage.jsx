@@ -32,8 +32,8 @@ export class HomePage extends Component {
                 <h3>{user.phone}</h3>
                 <h4>{user.email}</h4>
                 </div>
-                <h2><img src={`./../../imgs/coins.png`}  /> Coins: {user.coins}</h2>
-                <h2><img src={`./../../imgs/bitcoin.png`}  /> BTC: {coin}</h2>
+                <h2><img src={`./imgs/coins.png`}  /> Coins: {user.coins}</h2>
+                <h2><img src={`./imgs/bitcoin.png`}  /> BTC: {coin}</h2>
                {/* <input /> */}
             </div>
         )

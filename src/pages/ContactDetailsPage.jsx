@@ -22,7 +22,7 @@ export class ContactDetailsPage extends React.Component {
                 
                 </div>
                 <div className='user-details'>
-                <img src={`./../../imgs/user.jpg`} alt="" />
+                <img src={`./imgs/user.jpg`} alt="" />
                 <h1> {contact?.name}</h1>
                 <h3>{contact?.phone}</h3>
                 <h4>{contact?.email}</h4>

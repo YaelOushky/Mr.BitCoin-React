@@ -9,7 +9,7 @@ export  function ContactPreview({contact,removeContact}) {
         <article  className="contact-preview">
             <Link to={`/contact/${contact._id}`}>
             <section className="info">
-                <img src={`./../../imgs/user.jpg`}  alt="" />
+                <img src={`./imgs/user.jpg`}  alt="" />
                 <div className='contact-details-preview'>
                 <h3>{contact.name}</h3>
                 <h5>{contact.phone}</h5>
