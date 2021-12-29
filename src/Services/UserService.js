@@ -1,22 +1,14 @@
 import { getSuggestedQuery } from "@testing-library/react";
+import { storageService } from './storageService'
 
- var gUsers=[]
+const USER_KEY = 'user'
+ let loggedInUser
 
-// export function getUser() {
-//     return {
-//         _id: _makeId(),
-//         name: 'Glenna Santana ',
-//         phone: '+1 (958) 502-3495',
-//         email: 'glennasantana@renovize.com',
-//         password: '1234',
-//         isAdmin: false,
-//         coins: 100,
-//         moves: [],
-//     };
-// }
 export function loadUser() {
-    console.log(gUsers[gUsers.length-1]);
-    return gUsers[gUsers.length-1]
+    let user = storageService.load(USER_KEY)
+  user =  JSON.parse(user)
+    return user
+   
 }
 
 export function getUser(user) {
@@ -31,9 +23,19 @@ export function getUser(user) {
         moves: [],
         isAdmin: false
     }
-    gUsers.push(newUser)
-    console.log(gUsers);
+    storageService.store(USER_KEY, newUser)
 }
+
+export function addMove(contact, amount) {
+    if (loggedInUser.coins - amount < 0) {
+      alert('You cant do that')
+      return
+    }
+    loggedInUser.coins -= amount
+    let sentAt = new Date().toLocaleTimeString()
+    loggedInUser.moves.unshift({ to: contact, amount, sentAt })
+    storageService.store(USER_KEY, loggedInUser)
+  }
 
 function _makeId(length = 5) {
     var txt = '';
